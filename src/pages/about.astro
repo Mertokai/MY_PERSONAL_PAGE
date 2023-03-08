@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from '../components/Header.astro';
 const pageTitle = "About Me";
 
 const identity = {
@@ -8,7 +10,9 @@ const identity = {
   hobbies: ["photography", "birdwatching", "baseball"],
 };
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
+const skillColor = "navy"
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 
@@ -23,14 +27,12 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+		<Header/>
 		<h1>{pageTitle}</h1>
 		<p>my skills are: </p>
 		<ul>
-			{skills.map((skill) => <li>{skill}</li>)}
+			{skills.map((skill) => <li class="skill">{skill}</li>)}
 		</ul>
-        
+		<Footer/>
 	</body>
 </html>
