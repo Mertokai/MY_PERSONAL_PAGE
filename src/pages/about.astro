@@ -1,38 +1,11 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from '../components/Header.astro';
-const pageTitle = "About Me";
-
-const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
+import BaseLayout from "../layouts/BaseLayout.astro";
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-const skillColor = "navy"
-const fontWeight = "bold";
-const textCase = "uppercase";
+let pageTitle = "About"
 ---
-
-
-
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Header/>
-		<h1>{pageTitle}</h1>
-		<p>my skills are: </p>
-		<ul>
-			{skills.map((skill) => <li class="skill">{skill}</li>)}
-		</ul>
-		<Footer/>
-	</body>
-</html>
+<BaseLayout pageTitle = {pageTitle} >
+	<p>my skills are: </p>
+	<ul>
+		{skills.map((skill) => <li class="skill">{skill}</li>)}
+	</ul> </BaseLayout>
+	
