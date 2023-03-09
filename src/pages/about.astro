@@ -1,11 +1,24 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "About Me";
+const happy = true;
+const finished = true;
+const goal = 3;
+const identity = {
+  firstName: "Sarah",
+  country: "Canada",
+  occupation: "Technical Writer",
+  hobbies: ["photography", "birdwatching", "baseball"],
+};
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-let pageTitle = "About"
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 <BaseLayout pageTitle = {pageTitle} >
 	<p>my skills are: </p>
 	<ul>
 		{skills.map((skill) => <li class="skill">{skill}</li>)}
-	</ul> </BaseLayout>
+	</ul> ,
+</BaseLayout>
 	
